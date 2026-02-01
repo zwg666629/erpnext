@@ -1,0 +1,206 @@
+{
+    "actions": [],
+    "autoname": "naming_series:",
+    "creation": "2026-02-01 20:00:00",
+    "doctype": "DocType",
+    "editable_grid": 1,
+    "engine": "InnoDB",
+    "field_order": [
+        "naming_series",
+        "transaction_date",
+        "customer",
+        "customer_name",
+        "column_break_1",
+        "company",
+        "status",
+        "section_old_gold",
+        "old_gold_purity",
+        "old_gold_weight",
+        "recycling_price",
+        "purity_discount",
+        "column_break_2",
+        "old_gold_value",
+        "section_new_item",
+        "pos_invoice",
+        "new_item_total",
+        "column_break_3",
+        "trade_in_deduction",
+        "amount_payable",
+        "section_remarks",
+        "remarks"
+    ],
+    "fields": [
+        {
+            "fieldname": "naming_series",
+            "fieldtype": "Select",
+            "label": "编号系列",
+            "options": "TI-.YYYY.-",
+            "default": "TI-.YYYY.-"
+        },
+        {
+            "fieldname": "transaction_date",
+            "fieldtype": "Date",
+            "label": "交易日期",
+            "default": "Today",
+            "reqd": 1
+        },
+        {
+            "fieldname": "customer",
+            "fieldtype": "Link",
+            "label": "客户",
+            "options": "Customer",
+            "reqd": 1
+        },
+        {
+            "fieldname": "customer_name",
+            "fieldtype": "Data",
+            "label": "客户名称",
+            "fetch_from": "customer.customer_name",
+            "read_only": 1
+        },
+        {
+            "fieldname": "column_break_1",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "company",
+            "fieldtype": "Link",
+            "label": "公司",
+            "options": "Company",
+            "reqd": 1
+        },
+        {
+            "fieldname": "status",
+            "fieldtype": "Select",
+            "label": "状态",
+            "options": "草稿\n已完成\n已取消",
+            "default": "草稿"
+        },
+        {
+            "fieldname": "section_old_gold",
+            "fieldtype": "Section Break",
+            "label": "旧金信息"
+        },
+        {
+            "fieldname": "old_gold_purity",
+            "fieldtype": "Select",
+            "label": "旧金成色",
+            "options": "\n足金999\n足金990\n18K金\n22K金\n铂金\n银",
+            "reqd": 1
+        },
+        {
+            "fieldname": "old_gold_weight",
+            "fieldtype": "Float",
+            "label": "旧金克重",
+            "precision": "3",
+            "reqd": 1
+        },
+        {
+            "fieldname": "recycling_price",
+            "fieldtype": "Currency",
+            "label": "回收单价（元/克）",
+            "reqd": 1
+        },
+        {
+            "fieldname": "purity_discount",
+            "fieldtype": "Percent",
+            "label": "成色折扣",
+            "default": "100"
+        },
+        {
+            "fieldname": "column_break_2",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "old_gold_value",
+            "fieldtype": "Currency",
+            "label": "旧金价值",
+            "read_only": 1,
+            "bold": 1
+        },
+        {
+            "fieldname": "section_new_item",
+            "fieldtype": "Section Break",
+            "label": "换购信息"
+        },
+        {
+            "fieldname": "pos_invoice",
+            "fieldtype": "Link",
+            "label": "关联POS发票",
+            "options": "POS Invoice"
+        },
+        {
+            "fieldname": "new_item_total",
+            "fieldtype": "Currency",
+            "label": "新品总价",
+            "fetch_from": "pos_invoice.grand_total"
+        },
+        {
+            "fieldname": "column_break_3",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "trade_in_deduction",
+            "fieldtype": "Currency",
+            "label": "以旧换新抵扣",
+            "read_only": 1,
+            "bold": 1
+        },
+        {
+            "fieldname": "amount_payable",
+            "fieldtype": "Currency",
+            "label": "应付金额",
+            "read_only": 1,
+            "bold": 1
+        },
+        {
+            "fieldname": "section_remarks",
+            "fieldtype": "Section Break",
+            "label": "备注"
+        },
+        {
+            "fieldname": "remarks",
+            "fieldtype": "Small Text",
+            "label": "备注"
+        }
+    ],
+    "index_web_pages_for_search": 1,
+    "links": [],
+    "modified": "2026-02-01 20:00:00",
+    "modified_by": "Administrator",
+    "module": "Jewelry",
+    "name": "Trade In Transaction",
+    "naming_rule": "By \"Naming Series\" field",
+    "owner": "Administrator",
+    "permissions": [
+        {
+            "create": 1,
+            "delete": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "Sales User",
+            "share": 1,
+            "write": 1
+        },
+        {
+            "create": 1,
+            "delete": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "Accounts User",
+            "share": 1,
+            "write": 1
+        }
+    ],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "states": [],
+    "title_field": "customer_name",
+    "track_changes": 1
+}
