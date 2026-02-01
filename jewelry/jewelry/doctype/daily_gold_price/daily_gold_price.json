@@ -1,0 +1,124 @@
+{
+    "actions": [],
+    "autoname": "field:date",
+    "creation": "2024-01-01 00:00:00.000000",
+    "doctype": "DocType",
+    "engine": "InnoDB",
+    "field_order": [
+        "date",
+        "column_break_1",
+        "gold_999_price",
+        "gold_990_price",
+        "gold_750_price",
+        "gold_916_price",
+        "column_break_2",
+        "platinum_price",
+        "silver_price"
+    ],
+    "fields": [
+        {
+            "fieldname": "date",
+            "fieldtype": "Date",
+            "in_list_view": 1,
+            "label": "日期",
+            "reqd": 1,
+            "unique": 1
+        },
+        {
+            "fieldname": "column_break_1",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "gold_999_price",
+            "fieldtype": "Currency",
+            "in_list_view": 1,
+            "label": "足金999价格（元/克）",
+            "precision": "2"
+        },
+        {
+            "fieldname": "gold_990_price",
+            "fieldtype": "Currency",
+            "in_list_view": 1,
+            "label": "足金990价格（元/克）",
+            "precision": "2"
+        },
+        {
+            "fieldname": "gold_750_price",
+            "fieldtype": "Currency",
+            "label": "18K金价格（元/克）",
+            "precision": "2"
+        },
+        {
+            "fieldname": "gold_916_price",
+            "fieldtype": "Currency",
+            "label": "22K金价格（元/克）",
+            "precision": "2"
+        },
+        {
+            "fieldname": "column_break_2",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "platinum_price",
+            "fieldtype": "Currency",
+            "label": "铂金价格（元/克）",
+            "precision": "2"
+        },
+        {
+            "fieldname": "silver_price",
+            "fieldtype": "Currency",
+            "label": "银价格（元/克）",
+            "precision": "2"
+        }
+    ],
+    "index_web_pages_for_search": 1,
+    "links": [],
+    "modified": "2024-01-01 00:00:00.000000",
+    "modified_by": "Administrator",
+    "module": "Jewelry",
+    "name": "Daily Gold Price",
+    "naming_rule": "By fieldname",
+    "owner": "Administrator",
+    "permissions": [
+        {
+            "create": 1,
+            "delete": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "System Manager",
+            "share": 1,
+            "write": 1
+        },
+        {
+            "create": 1,
+            "delete": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "Stock Manager",
+            "share": 1,
+            "write": 1
+        },
+        {
+            "create": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "Sales User",
+            "share": 1,
+            "write": 1
+        }
+    ],
+    "sort_field": "date",
+    "sort_order": "DESC",
+    "states": [],
+    "title_field": "date",
+    "track_changes": 1
+}

@@ -1,0 +1,1 @@
+# Daily Gold Price DocType
